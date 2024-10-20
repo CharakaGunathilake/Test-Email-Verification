@@ -1,17 +1,18 @@
 
-function emailVerification(){
+function emailVerification() {
 
-    let email = document.getElementById("emailInput");
+    const email = document.getElementById("emailInput");
     const otpDiv = document.getElementsByClassName("otpDiv")[0];
 
+    alert("working");
     console.log("working");
 
     let otp = Math.floor(Math.random()*10000);
 
-    let emailBody = `<h2>Your OTP is </h2>${otp.value}`;
+    let emailBody = `<h2>Your OTP is </h2>${otp.valueOf}`;
 
     Email.send({
-        SecureToken : "9f74fc1f-75a9-452a-9c7a-454b9ee8d9ee",
+        SecureToken : "1cb22b98-690c-4737-9849-60025554d48e",
         To : email.value,
         From : "gunathilakec122@gmail.com",
         Subject : "OTP Verification",
@@ -37,5 +38,4 @@ function emailVerification(){
         }
       }
     );
-    
 }
