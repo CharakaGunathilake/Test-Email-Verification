@@ -17,13 +17,11 @@ function emailVerification() {
       Body: emailBody
   }).then((message) => {
     console.log(message);
-        if (message === "OK") {
-          alert("OTp sent to your email " + email.value);
             if (message === "OK"){
-                alert("An OTP is sent to your emai-> " + email.value);
+                alert("An OTP is sent to your email-> " + email.value);
 
                 if(otpDiv.classList.contains("visually-hidden")){
-                    document.getElementById("btnRecieve").classList.toggle("visullay-hidden");
+                    document.getElementById("btnRecieve").classList.toggle("visually-hidden");
                     otpDiv.classList.replace("visually-hidden","d-block");
                     const otpInput = document.getElementById("otpInput");
                     const btnVerify = document.getElementById("btnVerify");
@@ -38,6 +36,5 @@ function emailVerification() {
                 }
             }
         }
-    }
     )
 }
